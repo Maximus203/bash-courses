@@ -1,0 +1,12 @@
+#!/bin/bash
+
+sendmail() { echo $1 | mail -s "Etat d'utilisation du disque" root ;}
+
+rom=$(df --output=pcent / |tail -1 |sed s/%//)
+
+if [ $rom -gt 75 ] ; then
+	sendmail "Rouge"
+else
+	sendmail "Vert"
+fi
+
