@@ -1,0 +1,26 @@
+#!/bin/bash
+
+internetDOWN() {	echo "`date +%d/%m/%Y" "%H:%M`- Les serveurs ne sont pas accessibles" >> /opt/etat.txt;}
+sendmail() { 	echo "Coucou l'admin, votre serveur est inaccessible " | mail -s "Serveur inaccessible" root ;}
+
+address=0.2.8.8
+
+counter=0
+while [ $counter -le 2 ]
+do
+	ping -c1 -W7 $address >> /dev/null
+
+	if [ $? -ne 0 ]; then
+		counter=$((counter=counter+1))
+		sleep 1
+		
+		if [ $counter -eq 2 ]
+		then
+			internetDOWN
+			sendmail
+		fi
+	else
+		break
+	fi
+done
+

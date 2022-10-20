@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ $# -eq 0 ] ; then
+        read -p "Entrer un nombre " n
+else
+        n=$1
+fi
+
+if [ $n -ge 0 -a $n -lt 50 ] ; then
+       	echo "Vert"
+elif [ $n -ge 50 -a $n -le 75 ] ; then
+       	echo "Orange"
+elif [ $n -gt 75 -a $n -le 100 ] ; then
+       	echo "Rouge"
+else
+       	echo "Erreur !"
+fi
+
