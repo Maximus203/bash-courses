@@ -6,11 +6,20 @@ Quelques scripts bash qui ont differents utilités. Tout cela est expliquer [ici
 
 Les scripts commence de l'ecriture de Hello world avec le bash de linux jusqu'a des scripts d'administration.
 
-### 1
+### Script 1
 Hello world.
 
-### 2
+### Script  2
 Script d'utilisation des paramètres et des structures conditionnelles.
 
-### 3
+### Script  3
 Script pour permettre à l'utilisateur de saisir des variables.
+
+### Script 4
+Script pour savoir si le fichier passer en argument est un fichier ou un répertoire.
+
+### Script 5
+Script pour savoir si l'utilisateur connecté est un utilisateur simple ou bien un administrateur.
+
+### Script 6
+Script qui affiche la table de multiplication du nombre passer en paramètre.
